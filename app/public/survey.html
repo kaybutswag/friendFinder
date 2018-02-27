@@ -1,0 +1,155 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mentor Survey</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <h1> Create Your Profile</h1>
+<form class="needs-validation" novalidate>
+  <div>
+    <div class="form-group col-md-6">
+      <label for="validationCustom01">First name</label>
+      <input type="text" class="form-control" placeholder="First name (Required)" required>
+    </div>
+  </div>
+    <div>
+    <div class="form-group col-md-6">
+      <label for="validationCustom01">Photo URL</label>
+      <input type="text" class="form-control" placeholder="myprofpic.jpg">
+    </div>
+  </div>
+
+  <p class="question" id="q1"> How do you like to relax?</p>
+  <div>
+    <input type="radio" value="1" name="question1">
+    <label for="contactChoice1">Reading academic pieces on a complex topic that differs from the one at hand</label><br>
+
+    <input type="radio" value="3" name="question1">
+    <label for="contactChoice1">A splash of alcohol in my alcohol</label><br>
+
+    <input type="radio" value="2" name="question1">
+    <label for="contactChoice1">Being with friends</label><br>
+
+    <input type="radio" value="4" name="question1">
+    <label for="contactChoice1">Throwing or breaking something</label><br>
+
+  </div>
+
+</form>
+
+<form>
+  <p class="question" id="q2"> Do you like the company of those who disagree with you?</p>
+  <div>
+    <input type="radio" value="1" name="question2">
+    <label for="contactChoice1">That's my nightmare!</label><br>
+
+    <input type="radio" value="2" name="question2">
+    <label for="contactChoice1">I'd rather not.</label><br>
+
+    <input type="radio" value="3" name="question2">
+    <label for="contactChoice1">It's ok as long as I have like-minded friends with me.</label><br>
+
+    <input type="radio" value="4" name="question2">
+    <label for="contactChoice1">Absolutely!</label><br>
+  </div>
+
+</form>
+
+<form>
+  <p class="question" id="q3">Favorite way to spend an evening</p>
+  <div>
+    <input type="radio" value="2" name="question3">
+    <label for="contactChoice1">Sporting Event</label><br>
+
+    <input type="radio" value="3" name="question3">
+    <label for="contactChoice1">Working on a last minute deal</label><br>
+
+    <input type="radio" value="1" name="question3">
+    <label for="contactChoice1">A night out dancing</label><br>
+
+    <input type="radio" value="4" name="question3">
+    <label for="contactChoice1">True Classical Music</label><br>
+
+  </div>
+
+</form>
+
+<form>
+  <p class="question" id="q4">What's your biggest weakness</p>
+  <div>
+    <input type="radio" value="2" name="question4">
+    <label for="contactChoice1">Believing the best in everyone</label><br>
+
+    <input type="radio" value="3" name="question4">
+    <label for="contactChoice1">Trying to juggle too many responsibilities</label><br>
+
+    <input type="radio" value="4" name="question4">
+    <label for="contactChoice1">My Ego</label><br>
+
+    <input type="radio" value="1" name="question4">
+    <label for="contactChoice1">Taking the fall for a close friend</label><br> 
+
+  </div>
+
+</form>
+
+<form>
+  <p class="question" id="q5">What drives you?</p>
+  <div>
+    <input type="radio" value="2" name="question5">
+    <label for="contactChoice1">Fighting for your ideals</label><br>
+
+    <input type="radio" value="3" name="question5">
+    <label for="contactChoice1">Learning as much as possible in this life</label><br>
+
+    <input type="radio" value="1" name="question5">
+    <label for="contactChoice1">Helping others</label><br>
+
+    <input type="radio" value="4" name="question5">
+    <label for="contactChoice1">Being a role model</label><br>
+
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    $(".submit").on("click", function(event) {
+      event.preventDefault();
+
+      var userAnswers = {
+        "q1a": $('input[name=question1]:checked').val(),
+        "q2a": $('input[name=question2]:checked').val(),
+        "q3a": $('input[name=question3]:checked').val(),
+        "q4a": $('input[name=question4]:checked').val(),
+        "q5a": $('input[name=question5]:checked').val()
+      };
+
+      console.log(userAnswers);
+
+      $.post("/api/friends", userAnswers,
+        function(data) {
+
+          if (data) {
+            alert("Submitted");
+          }
+
+          else {
+            alert("Error");
+          }
+
+          $("<input>").val("");
+
+        });
+
+    });
+
+</script>
