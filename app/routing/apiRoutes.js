@@ -9,7 +9,6 @@ module.exports = function(app) {
 
 
   app.post("/api/friends", function(req, res) {
-    console.log("hitting server side");
 
     var userData = req.body;
     // var userName = userData.name;
@@ -23,10 +22,6 @@ module.exports = function(app) {
       "matchblurb":""
     };
 
-console.log(userData);
-console.log(userScores);
-console.log(friendsData[0].scores);
-console.log(friendsData[0]);
 //looks through options
     for(var i=0; i<friendsData.length;i++){
       totalDifference=0;
@@ -35,7 +30,6 @@ console.log(friendsData[0]);
         totalDifference+=Math.abs(parseInt(userScores[j])-parseInt(friendsData[i].scores[j]));
         friendsData[i].menteeDifference = totalDifference;
       }
-      console.log(friendsData[i].menteeDifference);
     }
 //this is sorting options by difference.
       friendsData.sort(function(a,b){

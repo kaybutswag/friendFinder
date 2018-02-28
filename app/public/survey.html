@@ -256,7 +256,6 @@ input{
 
       }
       else{
-        console.log("here");
       $('#myModal').modal('show');
 
 //declaring in object caused errors
@@ -273,9 +272,6 @@ input{
         "scores":holdscores,
         "blurb":""
       };
-
-
-      console.log(userAnswers);
 
 
       $.post("/api/friends", userAnswers,
@@ -318,11 +314,11 @@ input{
   function clearForm(){
       $(".nameinput").val("");
       $(".photourl").val("");
-      $('input[name=question1]').attr('checked',false);
-      $('input[name=question2]').attr('checked',false);
-      $('input[name=question3]').attr('checked',false);
-      $('input[name=question4]').attr('checked',false);
-      $('input[name=question5]').attr('checked',false);
+      $('input[name=question1]').prop('checked',false);
+      $('input[name=question2]').prop('checked',false);
+      $('input[name=question3]').prop('checked',false);
+      $('input[name=question4]').prop('checked',false);
+      $('input[name=question5]').prop('checked',false);
  }
 
 
