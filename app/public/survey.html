@@ -1,155 +1,330 @@
 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="us-en">
 <head>
   <meta charset="UTF-8">
   <title>Mentor Survey</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:Work+Sans:400,600,900" rel="stylesheet">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style>
+
+*{
+  
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #A49694;
+  font-family: 'Work Sans', sans-serif;
+}
+h2{
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.mentorImage{
+  height: 200px;
+  border:solid 1px #4B4237;
+}
+input{
+  margin-bottom: 10px;
+}
+.container{
+  margin:20px 50px;
+  border:solid 2px #4B4237;
+  background-color: #EDE7D9;
+  padding: 20px;
+}
+
+.questions{
+  margin: 20px 20px;
+  padding: 20px;
+  border:solid 1px #4B4237;
+}
+
+.questions p{
+  font-weight: 600;
+}
+.buttonBox{
+  text-align: center;
+}
+
+.modalTitle, .mentorHeading{
+  text-align: center !important;
+}
+
+.modalTitle{
+  font-weight: 600;
+}
+
+.modalHeader, .modal-footer{
+  text-align: center !important;
+  background-color: #A49694;
+  border:solid 1px #4B4237;
+  justify-content: center;
+}
+
+.modalHeader{
+  padding-bottom: 10px;
+}
+
+.modal-body{
+  text-align: center;
+  background-color: #EDE7D9;
+  border:solid 1px #4B4237;
+}
+</style>
 </head>
 
 <body>
-  <h1> Create Your Profile</h1>
-<form class="needs-validation" novalidate>
-  <div>
-    <div class="form-group col-md-6">
-      <label for="validationCustom01">First name</label>
-      <input type="text" class="form-control" placeholder="First name (Required)" required>
-    </div>
-  </div>
-    <div>
-    <div class="form-group col-md-6">
-      <label for="validationCustom01">Photo URL</label>
-      <input type="text" class="form-control" placeholder="myprofpic.jpg">
-    </div>
-  </div>
+  <div class="container">
+    <h2> Create Your Profile</h2>
+      <form class="needs-validation" novalidate>
+      <div>
+        <div class="form-row col-md-6">
+          <label for="validationCustom01">First name</label>
+          <input type="text" class="form-control nameinput" placeholder="First name (Required)">
+        </div>
+      </div>
+        <div>
+        <div class="form-row col-md-6">
+          <label for="validationCustom02">Photo URL</label>
+          <input type="text" class="form-control photourl" placeholder="myprofpic.jpg">
+        </div>
+      </div>
 
-  <p class="question" id="q1"> How do you like to relax?</p>
-  <div>
-    <input type="radio" value="1" name="question1">
-    <label for="contactChoice1">Reading academic pieces on a complex topic that differs from the one at hand</label><br>
+      <section class="questions">
+          <form>
+            <p class="question" id="q1"> How do you like to relax?</p>
+            <div>
+              <input type="radio" value="1" name="question1" >
+              <label for="contactChoice1">Reading academic pieces on a complex topic that differs from the one at hand</label><br>
 
-    <input type="radio" value="3" name="question1">
-    <label for="contactChoice1">A splash of alcohol in my alcohol</label><br>
+              <input type="radio" value="3" name="question1">
+              <label for="contactChoice1">A splash of alcohol in my alcohol</label><br>
 
-    <input type="radio" value="2" name="question1">
-    <label for="contactChoice1">Being with friends</label><br>
+              <input type="radio" value="2" name="question1">
+              <label for="contactChoice1">Being with friends</label><br>
 
-    <input type="radio" value="4" name="question1">
-    <label for="contactChoice1">Throwing or breaking something</label><br>
+              <input type="radio" value="4" name="question1">
+              <label for="contactChoice1">Throwing or breaking something</label><br>
 
-  </div>
+            </div>
 
-</form>
+          </form>
 
-<form>
-  <p class="question" id="q2"> Do you like the company of those who disagree with you?</p>
-  <div>
-    <input type="radio" value="1" name="question2">
-    <label for="contactChoice1">That's my nightmare!</label><br>
+          <form>
+            <p class="question" id="q2"> Do you like the company of those who disagree with you?</p>
+            <div>
+              <input type="radio" value="1" name="question2" >
+              <label for="contactChoice1">That's my nightmare!</label><br>
 
-    <input type="radio" value="2" name="question2">
-    <label for="contactChoice1">I'd rather not.</label><br>
+              <input type="radio" value="2" name="question2">
+              <label for="contactChoice1">I'd rather not.</label><br>
 
-    <input type="radio" value="3" name="question2">
-    <label for="contactChoice1">It's ok as long as I have like-minded friends with me.</label><br>
+              <input type="radio" value="3" name="question2">
+              <label for="contactChoice1">It's ok as long as I have like-minded friends with me.</label><br>
 
-    <input type="radio" value="4" name="question2">
-    <label for="contactChoice1">Absolutely!</label><br>
-  </div>
+              <input type="radio" value="4" name="question2">
+              <label for="contactChoice1">Absolutely!</label><br>
+            </div>
 
-</form>
+          </form>
 
-<form>
-  <p class="question" id="q3">Favorite way to spend an evening</p>
-  <div>
-    <input type="radio" value="2" name="question3">
-    <label for="contactChoice1">Sporting Event</label><br>
+          <form>
+            <p class="question" id="q3">Favorite way to spend an evening</p>
+            <div>
+              <input type="radio" value="2" name="question3" >
+              <label for="contactChoice1">Sporting Event</label><br>
 
-    <input type="radio" value="3" name="question3">
-    <label for="contactChoice1">Working on a last minute deal</label><br>
+              <input type="radio" value="3" name="question3">
+              <label for="contactChoice1">Working on a last minute deal</label><br>
 
-    <input type="radio" value="1" name="question3">
-    <label for="contactChoice1">A night out dancing</label><br>
+              <input type="radio" value="1" name="question3">
+              <label for="contactChoice1">A night out dancing</label><br>
 
-    <input type="radio" value="4" name="question3">
-    <label for="contactChoice1">True Classical Music</label><br>
+              <input type="radio" value="4" name="question3">
+              <label for="contactChoice1">True Classical Music</label><br>
 
-  </div>
+            </div>
 
-</form>
+          </form>
 
-<form>
-  <p class="question" id="q4">What's your biggest weakness</p>
-  <div>
-    <input type="radio" value="2" name="question4">
-    <label for="contactChoice1">Believing the best in everyone</label><br>
+          <form>
+            <p class="question" id="q4">What's your biggest weakness</p>
+            <div>
+              <input type="radio" value="2" name="question4" >
+              <label for="contactChoice1">Believing the best in everyone</label><br>
 
-    <input type="radio" value="3" name="question4">
-    <label for="contactChoice1">Trying to juggle too many responsibilities</label><br>
+              <input type="radio" value="3" name="question4">
+              <label for="contactChoice1">Trying to juggle too many responsibilities</label><br>
 
-    <input type="radio" value="4" name="question4">
-    <label for="contactChoice1">My Ego</label><br>
+              <input type="radio" value="4" name="question4">
+              <label for="contactChoice1">My Ego</label><br>
 
-    <input type="radio" value="1" name="question4">
-    <label for="contactChoice1">Taking the fall for a close friend</label><br> 
+              <input type="radio" value="1" name="question4">
+              <label for="contactChoice1">Taking the fall for a close friend</label><br> 
 
-  </div>
+            </div>
 
-</form>
+          </form>
 
-<form>
-  <p class="question" id="q5">What drives you?</p>
-  <div>
-    <input type="radio" value="2" name="question5">
-    <label for="contactChoice1">Fighting for your ideals</label><br>
+          <form>
+            <p class="question" id="q5">What drives you?</p>
+            <div>
+              <input type="radio" value="2" name="question5" >
+              <label for="contactChoice1">Fighting for your ideals</label><br>
 
-    <input type="radio" value="3" name="question5">
-    <label for="contactChoice1">Learning as much as possible in this life</label><br>
+              <input type="radio" value="3" name="question5">
+              <label for="contactChoice1">Learning as much as possible in this life</label><br>
 
-    <input type="radio" value="1" name="question5">
-    <label for="contactChoice1">Helping others</label><br>
+              <input type="radio" value="1" name="question5">
+              <label for="contactChoice1">Helping others</label><br>
 
-    <input type="radio" value="4" name="question5">
-    <label for="contactChoice1">Being a role model</label><br>
+              <input type="radio" value="4" name="question5">
+              <label for="contactChoice1">Being a role model</label><br>
 
-  </div>
-  <div>
-    <button type="submit">Submit</button>
-  </div>
+            </div>
+            </form>
+            </section>
+          </form>
+
+
+            <div class="buttonBox">
+              <button type="button" class="btn btn-warning submit">Submit</button>
+            </div>
+            </div>
+      
+
+      <!-- modal starts here -->
+      <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modalHeader">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <br>
+              <h5 class="modalTitle">Meet your Mentor!</h5>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning reset"  data-dismiss="modal">Retake Test</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id="badModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modalHeader">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <br>
+              <h5 class="modalTitle1">Whoops a Daisy!</h5>
+            </div>
+            <div class="modal-body">
+              Hmmmm...Something is missing. Please make sure you entered your name and answered all questions.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning"  data-dismiss="modal">Return to Test</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 </form>
 </body>
-</html>
+
 
 <script type="text/javascript">
 
+
     $(".submit").on("click", function(event) {
+
       event.preventDefault();
+      if(($('.nameinput').val()==="")||$('input:radio:checked').val()===""){
+        $('#badModal').modal('show');
+
+      }
+      else{
+        console.log("here");
+      $('#myModal').modal('show');
+
+//declaring in object caused errors
+      var holdscores=[];
+      holdscores.push($('input[name=question1]:checked').val());
+      holdscores.push($('input[name=question2]:checked').val());
+      holdscores.push($('input[name=question3]:checked').val());
+      holdscores.push($('input[name=question4]:checked').val());
+      holdscores.push($('input[name=question5]:checked').val());
 
       var userAnswers = {
-        "q1a": $('input[name=question1]:checked').val(),
-        "q2a": $('input[name=question2]:checked').val(),
-        "q3a": $('input[name=question3]:checked').val(),
-        "q4a": $('input[name=question4]:checked').val(),
-        "q5a": $('input[name=question5]:checked').val()
+        "name":$('.nameinput').val(),
+        "photo":$('.photourl').val(),
+        "scores":holdscores,
+        "blurb":""
       };
+
 
       console.log(userAnswers);
 
+
       $.post("/api/friends", userAnswers,
         function(data) {
-
+          console.log("running");
+          console.log(data);
           if (data) {
-            alert("Submitted");
+            console.log("Submitted");
+            //display results
+            var mentorSec = $("<div>");
+            var mentorHeading=$("<p>");
+            mentorHeading.addClass("mentorHeading");
+            mentorHeading.html(data.matchname);
+            mentorSec.append(mentorHeading);
+
+            var mentorPic=$("<img>");
+            mentorPic.addClass("mentorImage");
+            mentorPic.attr({"src": data.matchphoto,"alt":"Photo of"+data.matchname});
+            mentorSec.append(mentorPic);
+
+            mentorSec.append("<p class='mentorBlurb'>"+data.matchblurb);
+
+            $(".modal-body").html(mentorSec);
           }
 
           else {
-            alert("Error");
+            console.log("Error");
           }
 
-          $("<input>").val("");
-
         });
+      }
 
     });
 
+    $(".reset").on("click", function(event) {
+       clearForm();
+    });
+
+
+  function clearForm(){
+      $(".nameinput").val("");
+      $(".photourl").val("");
+      $('input[name=question1]').attr('checked',false);
+      $('input[name=question2]').attr('checked',false);
+      $('input[name=question3]').attr('checked',false);
+      $('input[name=question4]').attr('checked',false);
+      $('input[name=question5]').attr('checked',false);
+ }
+
+
 </script>
+</html>

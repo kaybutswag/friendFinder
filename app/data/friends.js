@@ -1,3 +1,5 @@
+var friendsData=[
+
 {
 	"name":"Josh Lyman",
 	"photo":"https://vignette.wikia.nocookie.net/westwing/images/5/56/Josh_Lyman_2.jpg/revision/latest?cb=20100519082617",
@@ -5,7 +7,7 @@
 	2,2,3,4,2
 	],
 	"blurb":"Josh is arrogant with a doughy center. He loves a good fight and deeply idealistic."
-}
+},
 
 {
 	"name":"Donna Moss",
@@ -14,7 +16,7 @@
 	2,3,1,1,1
 	],
 	"blurb":"Donna had a rough and unconditional start but known for her wit. She cares deply for those around her."
-}
+},
 
 {
 	"name":"Sam Seaborn",
@@ -24,7 +26,7 @@
 	],
 	"blurb":"Sam is idealistic, brilliant, and energetic. He tends to over volunteer and believes the best in people."
 }
-
+,
 {
 	"name":"C.J Cregg",
 	"photo":"https://vignette.wikia.nocookie.net/westwing/images/e/eb/CJCregg.jpg/revision/latest/scale-to-width-down/666?cb=20160624173002",
@@ -32,7 +34,7 @@
 	3,4,1,3,4
 	],
 	"blurb":"CJ is well spoken and can handle the stress of everyone around her. She thrives when she is in the middle of the action."
-}
+},
 
 {
 	"name":"Charlie Young",
@@ -41,7 +43,7 @@
 	2,3,2,3,1
 	],
 	"blurb":"Charlie is the most in touch with the outside world. He is funny and fiercely loyal."
-}
+},
 
 {
 	"name":"Ainsley Hayes",
@@ -50,7 +52,7 @@
 	1,4,3,3,4
 	],
 	"blurb":"Ainsley is smart and willing to work with those who do not think like her. She does not handle pressure well."
-}
+},
 
 {
 	"name":"Jed Bartlett",
@@ -59,7 +61,7 @@
 	1,4,4,4,3
 	],
 	"blurb":"Brilliant, well-travelled and occassionally bombastic."
-}
+},
 
 {
 	"name":"Toby Ziegler",
@@ -68,7 +70,7 @@
 	4,2,2,4,2
 	],
 	"blurb":"Toby is a hard worker that does not need the approval of others."
-}
+},
 
 {
 	"name":"Leo McGarry",
@@ -76,8 +78,8 @@
 	"scores":[
 	3,2,3,1,2
 	],
-	"blurb":"Leo has a checkered past but a strategic mastermind."
-}
+	"blurb":"Leo has a checkered past but is a strategic mastermind."
+},
 
 {
 	"name":"Abbey Bartlett",
@@ -86,6 +88,6 @@
 	1,3,4,1,1
 	],
 	"blurb":"Abbey is a brilliant woman who has an outside area of expertise. She has had to learn to play second fiddle."
-}
+}];
 
 module.exports = friendsData;

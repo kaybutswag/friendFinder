@@ -1,25 +1,65 @@
-
-<html lang="en">
+<!DOCTYPE html>
+<html lang="us-en">
 <head>
   <meta charset="UTF-8">
   <title>Mentor Survey</title>
-  <script src="https://code.jquery.com/jquery.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,900" rel="stylesheet">
+
+<style>
+*{
+  
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #A49694;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+}
+ h1{
+  font-weight: 900;
+  padding-top: 50px;
+ }
+
+ h3,h4{
+  font-weight: 400;
+ }
+
+h4{
+  padding:10px 200px;
+}
+
+section{
+  margin:50px;
+  border:solid 1px #4B4237;
+  background-color: #EDE7D9;
+}
+
+#buttonBox{
+  margin-bottom: 50px;
+}
+</style>
 </head>
 
 <body>
 
 <section>
   <h1>Welcome to Your First Day on the Job!</h1>
-  <div>
+  <div id="textbox">
     <h3>
-      Starting a new gig is tough. After discussions with current employees, human resources decided to begin a mentor program. Take this short quiz and let us pair you with a mentor. 
+      Starting a new gig is tough.
     </h3>
+    <h4>
+       After discussions with current employees, human resources decided to begin a mentor program. Take this short quiz and <strong>let us pair you with a mentor.</strong> 
+     </h4>
   </div>
-  <div>
-    <button type="Take the Survey!">Submit</button>
+  <div id="buttonBox"><a href="/survey">
+    <button type="button" class="btn btn-warning">Take The Survey!</button>
   </div>
 </section>
 
-<script src="app/routing/htmlRoutes.js"></script>
+<!-- <script src="app/routing/htmlRoutes.js"></script> -->
+
 </body>
 </html>
