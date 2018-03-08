@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:Work+Sans:400,600,900" rel="stylesheet">
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -35,7 +37,7 @@ input{
   margin-bottom: 10px;
 }
 .container{
-  margin:20px 50px;
+  margin-top:2%;
   border:solid 2px #4B4237;
   background-color: #EDE7D9;
   padding: 20px;
@@ -78,10 +80,35 @@ input{
   background-color: #EDE7D9;
   border:solid 1px #4B4237;
 }
+
+input[type=radio] {
+    float: left;
+}
+
+label {
+    margin-left: 30px;
+    display: block;
+}
+
+#homeBox{
+  text-align: right;
+  padding-top: 3px;
+  padding-right: 3px;
+}
+
+#homeBox button, .buttonBox button{
+  border: 1px solid #4B4237;
+}
+
 </style>
 </head>
 
 <body>
+  <div id="homeBox"><a href="/home">
+    <button type="button" class="btn btn-warning"><i class="fas fa-home"></i>
+    </button></a>
+  </div>
+
   <div class="container">
     <h2> Create Your Profile</h2>
       <form class="needs-validation" novalidate>
@@ -103,16 +130,16 @@ input{
             <p class="question" id="q1"> How do you like to relax?</p>
             <div>
               <input type="radio" value="1" name="question1" >
-              <label for="contactChoice1">Reading academic pieces on a complex topic that differs from the one at hand</label><br>
+              <label for="contactChoice1">Reading academic pieces on a complex topic that differs from the one at hand</label>
 
               <input type="radio" value="3" name="question1">
-              <label for="contactChoice1">A splash of alcohol in my alcohol</label><br>
+              <label for="contactChoice1">A splash of alcohol in my alcohol</label>
 
               <input type="radio" value="2" name="question1">
-              <label for="contactChoice1">Being with friends</label><br>
+              <label for="contactChoice1">Being with friends</label>
 
               <input type="radio" value="4" name="question1">
-              <label for="contactChoice1">Throwing or breaking something</label><br>
+              <label for="contactChoice1">Throwing or breaking something</label>
 
             </div>
 
@@ -122,16 +149,16 @@ input{
             <p class="question" id="q2"> Do you like the company of those who disagree with you?</p>
             <div>
               <input type="radio" value="1" name="question2" >
-              <label for="contactChoice1">That's my nightmare!</label><br>
+              <label for="contactChoice1">That's my nightmare!</label>
 
               <input type="radio" value="2" name="question2">
-              <label for="contactChoice1">I'd rather not.</label><br>
+              <label for="contactChoice1">I'd rather not.</label>
 
               <input type="radio" value="3" name="question2">
-              <label for="contactChoice1">It's ok as long as I have like-minded friends with me.</label><br>
+              <label for="contactChoice1">It's ok as long as I have like-minded friends with me.</label>
 
               <input type="radio" value="4" name="question2">
-              <label for="contactChoice1">Absolutely!</label><br>
+              <label for="contactChoice1">Absolutely!</label>
             </div>
 
           </form>
@@ -140,16 +167,16 @@ input{
             <p class="question" id="q3">Favorite way to spend an evening</p>
             <div>
               <input type="radio" value="2" name="question3" >
-              <label for="contactChoice1">Sporting Event</label><br>
+              <label for="contactChoice1">Sporting Event</label>
 
               <input type="radio" value="3" name="question3">
-              <label for="contactChoice1">Working on a last minute deal</label><br>
+              <label for="contactChoice1">Working on a last minute deal</label>
 
               <input type="radio" value="1" name="question3">
-              <label for="contactChoice1">A night out dancing</label><br>
+              <label for="contactChoice1">A night out dancing</label>
 
               <input type="radio" value="4" name="question3">
-              <label for="contactChoice1">True Classical Music</label><br>
+              <label for="contactChoice1">True Classical Music</label>
 
             </div>
 
@@ -159,16 +186,16 @@ input{
             <p class="question" id="q4">What's your biggest weakness</p>
             <div>
               <input type="radio" value="2" name="question4" >
-              <label for="contactChoice1">Believing the best in everyone</label><br>
+              <label for="contactChoice1">Believing the best in everyone</label>
 
               <input type="radio" value="3" name="question4">
-              <label for="contactChoice1">Trying to juggle too many responsibilities</label><br>
+              <label for="contactChoice1">Trying to juggle too many responsibilities</label>
 
               <input type="radio" value="4" name="question4">
-              <label for="contactChoice1">My Ego</label><br>
+              <label for="contactChoice1">My Ego</label>
 
               <input type="radio" value="1" name="question4">
-              <label for="contactChoice1">Taking the fall for a close friend</label><br> 
+              <label for="contactChoice1">Taking the fall for a close friend</label> 
 
             </div>
 
@@ -178,16 +205,16 @@ input{
             <p class="question" id="q5">What drives you?</p>
             <div>
               <input type="radio" value="2" name="question5" >
-              <label for="contactChoice1">Fighting for your ideals</label><br>
+              <label for="contactChoice1">Fighting for your ideals</label>
 
               <input type="radio" value="3" name="question5">
-              <label for="contactChoice1">Learning as much as possible in this life</label><br>
+              <label for="contactChoice1">Learning as much as possible in this life</label>
 
               <input type="radio" value="1" name="question5">
-              <label for="contactChoice1">Helping others</label><br>
+              <label for="contactChoice1">Helping others</label>
 
               <input type="radio" value="4" name="question5">
-              <label for="contactChoice1">Being a role model</label><br>
+              <label for="contactChoice1">Being a role model</label>
 
             </div>
             </form>
